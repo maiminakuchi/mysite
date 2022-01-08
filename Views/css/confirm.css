@@ -1,0 +1,85 @@
+@charset "UTF-8";
+* {
+  -webkit-appearance: none;
+}
+*{
+  color: #4c5662;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+body{
+font-family: arial;
+/*font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;*/
+/*background-color: yellow;*/
+/*min-width: 920px;*/
+
+}
+
+
+.btn-stitch_conf{
+  margin: 10px;
+  display: inline-block;
+  padding: 2px 20px 2px 20px;
+  text-decoration: none;
+  background: #818b9f;
+  color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #818b9f;
+  border: dashed 1px #FFF;
+
+}
+
+.btn-stitch_conf:hover {
+  border: dotted 1px #FFF;
+}
+
+.content2 {
+  color: #4c5662;
+  padding-top: 10px;
+  background-color:white;
+  width:80%;
+  /*height:700px;*/
+  /*text-align:center;*/
+  box-shadow: 0 0 3px 3px #ffffff;
+
+}
+
+.my_index_title{
+  font-size: 18px;
+  margin: 10px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.post_form{
+  padding: 0.5em 1em;
+  margin: 3px 40px 0 5px;
+  font-weight: normal;
+  color: #8c8e91;/*文字色*/
+  background: #FFF;
+  border: solid 1px #8c8e91;/*線*/
+  border-radius: 7px;/*角の丸み*/
+}
+.btn-stitch2 {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8c8e91;
+  color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 4px #8c8e91;
+  border: dashed 1px #FFF;
+  margin: 10px;
+}
+
+.btn-stitch2:hover {
+  border: dotted 1px #FFF;
+}
+.margin{
+   margin-left: 10px;
+}

@@ -1,0 +1,101 @@
+@charset "UTF-8";
+* {
+  -webkit-appearance: none;
+}
+*{
+  color: #4c5662;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+font-family: arial;
+/*font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;*/
+/*background-color: yellow;*/
+/*min-width: 920px;*/
+
+}
+
+
+.btn-stitch {
+  margin: 10px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #818b9f;
+  color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #818b9f;
+  border: dashed 1px #FFF;
+
+}
+
+.btn-stitch:hover {
+  border: dotted 1px #FFF;
+}
+
+.content2 {
+  color: #4c5662;
+  padding-top: 10px;
+  background-color:white;
+  width:80%;
+  /*height:700px;*/
+  text-align:center;
+  box-shadow: 0 0 3px 3px #ffffff;
+  background-image: url(./img/fuu.png);
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  background-size: cover;
+}
+
+.my_index_title{
+  font-size: 20px;
+  margin: 10px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+.btn-success{
+  background-color: #d5cbd0;
+
+}
+.btn{
+  margin-left: 300px;
+  color: #3c4a56;
+}
+
+.contents{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 20%;
+}
+.contents_conainer{
+  background: #eee;
+  overflow: hidden;
+  width: 70%;
+}
+.title{
+  width: 23%;
+  height: 39px;
+}
+.place{
+  width: 15%;
+  height: 39px;
+}
+.cate{
+  width: 15%;
+  height: 39px;
+}
+.date{
+  width: 10%;
+  height: 39px;
+}
+.detail{
+  width: 5%;
+  height: 39px;
+}
+.db_table{
+  width: 98%;
+}

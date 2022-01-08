@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+font-family: arial;
+/*font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;*/
+/*background-color: yellow;*/
+/*min-width: 920px;*/
+
+}
+
+.side {
+  background-color:#F9E6E6;
+  width:20%;
+  height:auto;
+  text-align:center;
+}
+
+.content {
+  background-color:white;
+  width:70%;
+  height:700px;
+  text-align:center;
+  margin-left:10px;/*サイドバーとメインコンテンツの間に隙間                    をあけた*/
+}
+
+article {
+  display:flex;/*サイドバーとメインコンテンツを横並びにする                指定をした*/
+}
+
+
+
+
+
+
+th,td {
+    border: solid 1px;              /* 枠線指定 */
+}
+table {
+    border-collapse:  collapse;     /* セルの線を重ねる */
+}
+td{
+  padding: 2px;
+}
+.db_table{
+ margin: 20px;
+}

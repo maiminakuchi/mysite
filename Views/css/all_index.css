@@ -1,0 +1,203 @@
+@charset "UTF-8";
+* {
+  -webkit-appearance: none;
+}
+*{
+  color: #4c5662;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+font-family: arial;
+/*font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;*/
+/*background-color: yellow;*/
+/*min-width: 920px;*/
+
+}
+
+
+.btn-stitch {
+  margin: 10px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #818b9f;
+  color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #818b9f;
+  border: dashed 1px #FFF;
+  font-size: 13.5px;
+}
+
+.btn-stitch:hover {
+  border: dotted 1px #FFF;
+}
+
+.content2 {
+  color: #4c5662;
+  padding-top: 10px;
+  background-color:white;
+  width:80%;
+  /*height:700px;*/
+  text-align:center;
+  box-shadow: 0 0 3px 3px #ffffff;
+  background-image: url(./img/fuu.png);
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  background-size: cover;
+
+  /*background: linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url(./img/fuu.png);*/
+}
+
+.my_index_title{
+  font-size: 20px;
+  margin: 10px;
+}
+.container{
+  display: flex;
+  justify-content: left;
+}
+.back{
+  margin: 13px;
+}
+.btn-success{
+  background-color: #d5cbd0;
+
+}
+.btn{
+  margin-left: 300px;
+  color: #3c4a56;
+}
+
+.contents{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 20%;
+}
+.contents_conainer{
+  text-align: center;
+  background: #eee;
+  overflow: hidden;
+  width: 70%;
+}
+.title{
+  width: 23%;
+  height: 39px;
+}
+.place{
+  width: 15%;
+  height: 39px;
+}
+.cate{
+  width: 15%;
+  height: 39px;
+}
+.date{
+  width: 10%;
+  height: 39px;
+}
+.detail{
+  width: 5%;
+  height: 39px;
+}
+tbody{
+  text-align: center;
+}
+.db_table{
+  width: 98%;
+}
+.margin{
+  margin: 35px;
+}
+
+
+.open-btn1{
+  position: absolute;
+  top:153px;
+  right:15px;
+  background:url("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-3/img/icon_search.svg") no-repeat 15px center;/*虫眼鏡アイコンを背景に表示*/
+  background-size: 20px 20px;
+  width:50px;
+  height:50px;
+  cursor: pointer;/*カーソルを指マークに*/
+}
+
+/*クリック後、JSでボタンに btnactive クラスが付与された後の見た目*/
+.open-btn1.btnactive{
+  background:url("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-3/img/icon_close.svg") no-repeat 15px center;/*閉じるアイコンを背景に表示*/
+  background-size: 18px 18px;
+}
+
+/*========= 検索窓の設定 ===============*/
+
+/*==検索窓背景のエリア*/
+
+#search-wrap{
+  position:absolute;/*絶対配置にして*/
+  top:150px;
+  right:1300px;
+  z-index: -1;/*最背面に設定*/
+  opacity: 0;/*透過を0に*/
+  width:0;/*横幅は0に*/
+  transition: all 0.4s;/*transitionを使ってスムースに現れる*/
+  border-radius: 5px;
+}
+
+/*ボタンクリック後、JSで#search-wrapに panelactive クラスが付与された後の見た目*/
+#search-wrap.panelactive{
+  opacity: 1;/*不透明に変更*/
+  z-index: 3;/*全面に出現*/
+  width:500px;
+  padding:20px;
+  top:150px;
+  background:#fff;
+}
+
+/*==検索窓*/
+#search-wrap #searchform{
+  display: none;/*検索窓は、はじめ非表示*/
+}
+
+/*ボタンクリック後、JSで#search-wrapに panelactive クラスが付与された後*/
+#search-wrap.panelactive #searchform{
+  display: block;/*検索窓を表示*/
+}
+
+/*==検索フォームの設定*/
+
+/*==テキスト入力とボタンinput共通設定*/
+#search-wrap input{
+  -webkit-appearance:none;/*SafariやChromeのデフォルトの設定を無効*/
+  outline: none;
+  cursor: pointer;/*カーソルを指マークに*/
+  color: #666;
+}
+
+/*テキスト入力input設定*/
+ #search-wrap input[type="text"] {
+  width: 100%;
+  border: none;
+  border-bottom:2px solid #ccc;
+  transition: all 0.5s;
+  letter-spacing: 0.05em;
+    height:46px;
+  padding: 10px;
+}
+
+/*テキスト入力inputにフォーカスされたら*/
+ #search-wrap input[type="text"]:focus {
+  background:#eee;/*背景色を付ける*/
+}
+
+/*ボタンinput設定*/
+ #search-wrap input[type="submit"] {
+  position: absolute;
+    top:10px;
+  right:30px;
+  background:url("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-3/img/icon_search.svg") no-repeat right;/*虫眼鏡アイコンを背景に表示*/
+  background-size: 20px 20px;
+  width:30px;
+  height: 60px;
+}

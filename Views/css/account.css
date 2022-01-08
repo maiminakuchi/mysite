@@ -1,0 +1,172 @@
+@charset "UTF-8";
+* {
+  -webkit-appearance: none;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+font-family: arial;
+/*font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;*/
+/*background-color: yellow;*/
+/*min-width: 920px;*/
+
+}
+
+
+.btn-stitch {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8c8e91;
+  color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 4px #8c8e91;
+  border: dashed 1px #FFF;
+  margin-right: 2.5%;
+  font-size: 13.5px;
+}
+
+.btn-stitch:hover {
+  border: dotted 1px #FFF;
+}
+
+
+/* 
+** The Header Media Queries **
+** Tweak as per your needs **
+*/
+
+
+.side {
+  /*background-color:#F9E6E6;*/
+  background-color:#f2caca;
+  /*background-color:#f6acca;*/
+  /*background-color:#ffb6c1;*/
+  box-shadow: 0 0 3px 3px #f2caca;
+
+  width:20%;
+  min-height: 720px;
+  height:auto;
+  text-align:center;
+}
+.rink {
+  color: #4c5662;
+  display: block;
+  padding: 9px;
+  margin-top: 35px;
+}
+.rink_under{
+  color: #4c5662;
+  display: block;
+  padding: 9px;
+  margin-top: 35px;
+  margin-bottom: 300px;
+}
+
+.content {
+  color: #4c5662;
+  padding-top: 10px;
+  background-color:white;
+  width:80%;
+  /*height:700px;*/
+  text-align:center;
+  box-shadow: 0 0 3px 3px #ffffff;
+  background-image: url(./img/fuu.png);
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  background-size: cover;
+}
+.welcome{
+  margin-top: 50px;
+  font-size: 30px;
+  margin: 50px;
+}
+.userinfo{
+  margin: 50px;
+}
+
+.countevent{
+  margin: 50px;
+}
+
+.userinfo{
+  margin: 50px;
+}
+
+article {
+  display:flex;/*サイドバーとメインコンテンツを横並びにする                指定をした*/
+}
+
+.userinfotitle{
+  margin: 20px;
+}
+.btn-stitch2 {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  background: #8c8e91;
+  color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 4px #8c8e91;
+  border: dashed 1px #FFF;
+  margin: 25px;
+}
+
+.btn-stitch2:hover {
+  border: dotted 1px #FFF;
+}
+/* -- css -- */
+
+.waku{
+    height: 2.4em;
+    width: 60%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.waku2{
+    margin: 40px;
+    height: 2.4em;
+    width: 10%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.wakuue{
+  display: block;
+}
+.title{
+  width: 23%;
+  height: 39px;
+}
+.place{
+  width: 15%;
+  height: 39px;
+}
+.cate{
+  width: 15%;
+  height: 39px;
+}
+.date{
+  width: 10%;
+  height: 39px;
+}
+.detail{
+  width: 5%;
+  height: 39px;
+}
+.delete_btn a{
+  text-decoration: none;
+}
+
+
+

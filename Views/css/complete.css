@@ -1,0 +1,31 @@
+@charset "UTF-8";
+* {
+  -webkit-appearance: none;
+}
+*{
+  color: #4c5662;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+body{
+font-family: arial;
+/*font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;*/
+/*background-color: yellow;*/
+/*min-width: 920px;*/
+
+}
+
+.content2{
+  width: 80%;
+  position: relative;
+}
+.center{
+  margin: auto;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+}

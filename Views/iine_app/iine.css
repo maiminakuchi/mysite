@@ -1,0 +1,236 @@
+/* -----------------------------------------------------------
+個人サイト向けいいねボタンプログラム Ver1.1.1
+製作者    ：ガタガタ
+サイト    ：https://do.gt-gt.org/
+ライセンス：MITライセンス
+全文      ：https://ja.osdn.net/projects/opensource/wiki/licenses%2FMIT_license
+公開日    ：2020.08.21
+最終更新日：2020.11.09
+
+このプログラムはどなたでも無償で利用・複製・変更・
+再配布および複製物を販売することができます。
+ただし、上記著作権表示ならびに同意意志を、
+このファイルから削除しないでください。
+ ----------------------------------------------------------- */
+
+div#iine_wrap {
+  position: relative;
+  float: right;
+}
+
+/* お礼メッセージを上にポップアップする場合ここから */
+div#iine_wrap div#iine_thanks {
+    width: 43px;
+    max-width: 100%;
+    background: white;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    padding: 10px;
+    filter: drop-shadow(0 2px 8px #cccccc7d);
+    position: absolute;
+    bottom: 90%;
+    right: -18%;
+    opacity: 0;
+    animation-name: thanks-up;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+div#iine_wrap div#iine_thanks:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-bottom: 20px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid white;
+    position: absolute;
+    left: 20px;
+}
+/* お礼メッセージを上にポップアップする場合ここまで */
+
+/* お礼メッセージを下にポップアップする場合ここから */
+/*
+div#iine_wrap div#iine_thanks {
+    width: 300px;
+    max-width: 100%;
+    background: white;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    padding: 10px;
+    filter: drop-shadow(0 2px 8px #cccccc7d);
+    position: absolute;
+    top: 140%;
+    opacity: 0;
+    animation-name: thanks-down;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+div#iine_wrap div#iine_thanks:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid white;
+    position: absolute;
+    bottom: calc(100% - 1px);
+    left: 20px;
+} */
+
+/* お礼メッセージを下にポップアップする場合ここまで */
+
+div#iine_wrap div#iine_thanks p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+div#iine_wrap div#iine_thanks img {
+  max-width: 100%;
+}
+
+div#iine_wrap.checked div#iine_thanks {
+  margin-top: 23px;
+  float: right;
+  display: block;
+  opacity: 1;
+  z-index: 100;
+}
+#iine_thanks{
+
+}
+
+button#iine {
+    margin-top: 23px;
+    float: right;
+    border: none;
+    background: transparent;
+}
+
+button#iine .iine_wrap {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    color: #e4e4e4;
+}
+
+button#iine:focus {
+  outline: none;
+}
+
+button#iine .iine_wrap .heart {
+  font-size: 28px;
+  transition: .3s;
+}
+
+button#iine:hover .iine_wrap .heart {
+  transform: scale(1.2);
+}
+
+button#iine .iine_wrap span {
+    position: absolute;
+    left: 44px;
+    font-size: 14px;
+    font-weight: bold;
+    word-break: keep-all;
+}
+
+div#iine_wrap.checked button#iine .iine_wrap .heart {
+  animation-name: heart;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+}
+div#iine_wrap.checked button#iine .iine_wrap span {
+  animation-name: counter;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+}
+
+div#iine_wrap.alreadychecked .iine_wrap .heart,
+div#iine_wrap.alreadychecked .iine_wrap span {
+  color: #fb0023 !important;
+}
+
+button#iine .iine_wrap .circle {
+  width: 85px;
+  height: 85px;
+  border: 1px solid #fb0023;
+  border-radius: 50%;
+  transform: scale(0);
+  position: absolute;
+}
+
+div#iine_wrap.checked button#iine .iine_wrap .circle {
+  animation-name: circle;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+}
+
+.fadeout {
+  animation : fadeOut 1s !important;
+  animation-fill-mode: both;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    color: #fb0023;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes counter {
+  100% {
+    color: #fb0023;
+  }
+}
+
+@keyframes thanks-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes thanks-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
